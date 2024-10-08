@@ -14,22 +14,24 @@
   </head>
   <body>
     <main>
-      <h1>Compras da semana</h1>
+      <div class="container">
+        <a class="link" href="#">← Voltar</a>
+        <h1>Compras da semana</h1>
+        <form>
+          <fieldset class="add-items">
+            <input
+              type="text"
+              placeholder="Adicione um novo item"
+              id="new-item"
+            />
+            <button type="submit" id="add">Adicionar item</button>
+          </fieldset>
 
-      <form>
-        <fieldset>
-          <input
-            type="text"
-            placeholder="Adicione um novo item"
-            id="new-item"
-          />
-          <button type="submit">Adicionar item</button>
-        </fieldset>
-
-        <fieldset id="items">
-          <span class="removed">O item foi removido da lista</span>
-        </fieldset>
-      </form>
+          <fieldset id="items">
+            <span class="removed">O item foi removido da lista</span>
+          </fieldset>
+        </form>
+      </div>
     </main>
     <script src="scripts.js"></script>
   </body>

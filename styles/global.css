@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 :root {
   --background-primary: #f4f5fb;
   --background-secondary: #fff;
@@ -22,7 +26,32 @@
 
   --font-family: "Inter", sans-serif;
   --title: 700 2.4rem/32px var(--font-family);
+  --input: 400 1.6rem/140% var(--font-family);
   --label: 600 1.6rem/30px var(--font-family);
   --paragraph: 500 1.6rem/20px var(--font-family);
   --link: 500 1.4rem/16px var(--font-family);
+}
+
+body {
+  background-color: var(--background-primary);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 3.2rem;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+button {
+  border-radius: 1.2rem;
+}
+
+a {
+  text-decoration: none;
 }
