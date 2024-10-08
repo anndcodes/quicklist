@@ -4,17 +4,29 @@ const form = document.querySelector("form");
 
 form.onsubmit = (event) => {
   event.preventDefault();
-  
+
   const itemWrapper = document.createElement("div");
   itemWrapper.classList.add("item-wrapper");
 
   const item = document.createElement("input");
   item.setAttribute("type", "checkbox");
 
-  const itemLabel = document.createElement("label")
+  const itemLabel = document.createElement("label");
   itemLabel.textContent = newItem.value;
 
+  const deleteBtn = document.createElement("img");
+  deleteBtn.setAttribute("src", "./assets/icons/delete.svg");
+
   itemsFieldset.append(itemWrapper);
-  itemWrapper.append(item, itemLabel);
+  itemWrapper.append(item, itemLabel, deleteBtn);
   newItem.value = "";
+
+  deleteItem(deleteBtn, itemWrapper)
+}
+
+
+function deleteItem(deleteBtn, itemWrapper) {
+  deleteBtn.addEventListener("click", () => {
+    itemWrapper.remove();
+  })
 }
