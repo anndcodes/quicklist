@@ -5,8 +5,12 @@ const form = document.querySelector("form");
 form.onsubmit = (event) => {
   event.preventDefault();
 
+  const itemContainer = document.createElement("div");
+  itemContainer.classList.add("item-container");
+
   const itemWrapper = document.createElement("div");
   itemWrapper.classList.add("item-wrapper");
+  
 
   const item = document.createElement("input");
   item.setAttribute("type", "checkbox");
@@ -16,17 +20,19 @@ form.onsubmit = (event) => {
 
   const deleteBtn = document.createElement("img");
   deleteBtn.setAttribute("src", "./assets/icons/delete.svg");
+  deleteBtn.classList.add("delete-icon");
 
-  itemsFieldset.append(itemWrapper);
-  itemWrapper.append(item, itemLabel, deleteBtn);
+  itemsFieldset.append(itemContainer);
+  itemWrapper.append(item, itemLabel);
+  itemContainer.append(itemWrapper, deleteBtn);
   newItem.value = "";
 
-  deleteItem(deleteBtn, itemWrapper)
+  deleteItem(deleteBtn, itemContainer)
 }
 
 
-function deleteItem(deleteBtn, itemWrapper) {
+function deleteItem(deleteBtn, itemContainer) {
   deleteBtn.addEventListener("click", () => {
-    itemWrapper.remove();
+    itemContainer.remove();
   })
 }
