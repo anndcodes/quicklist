@@ -67,6 +67,10 @@ h1 {
   padding: 1.2rem;
 }
 
+.item-container:last-child {
+  margin-bottom: 3.6rem;
+}
+
 .item-wrapper {
   display: flex;
   gap: 1.2rem;
@@ -81,7 +85,22 @@ label {
   cursor: pointer;
 }
 
-.removed {
-  display: none;
+.removed-msg {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  background: var(--color-danger);
+  color: var(--background-secondary);
+  padding: 1.2rem;
+  border-radius: 12px;
+  font: var(--label);
+  margin-block: 1.9rem 3.6rem;
 }
 
+.removed-msg img:last-child {
+  margin-left: auto;
+}
+
+.delete {
+  cursor: pointer;
+}
