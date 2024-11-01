@@ -30,7 +30,7 @@ h1 {
 }
 
 #new-item {
-  background-color: var(background-secondary);
+  background-color: var(--background-secondary);
   color: var(--content-tertiary);
   padding: 1.1rem 0 1.8rem 1.1rem;
   border: 0.2rem solid var(--border-primary);
@@ -89,7 +89,7 @@ label {
   align-items: center;
   gap: .8rem;
   background: var(--color-danger);
-  color: var(--background-secondary);
+  color: var(--always-white);
   padding: 1.2rem;
   border-radius: 12px;
   font: var(--label);
