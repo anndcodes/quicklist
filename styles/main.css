@@ -1,3 +1,7 @@
+header {
+  display: none;
+}
+
 .link {
   color: var(--color-brand);
   font: var(--link);
@@ -71,11 +75,6 @@ h1 {
   margin-bottom: 3.6rem;
 }
 
-.item-wrapper {
-  display: flex;
-  gap: 1.2rem;
-}
-
 label {
   font: var(--paragraph);
   color: var(--content-secondary);
@@ -103,4 +102,34 @@ label {
 
 .delete {
   cursor: pointer;
+}
+
+
+@media only screen and (min-width:992px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .9rem;
+    font-family: "Sora", sans-serif;
+    font-size: 2.7rem;
+    margin-top: 2.5rem;
+  }
+
+  .container {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+
+  .add-items {
+    flex-direction: row;
+  }
+
+  .add-items * {
+    width: 100%;
+  }
+  
+  .add-items  button {
+    width: 40%;
+  }
 }

@@ -7,23 +7,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Quicklist</title>
     <link rel="stylesheet" href="styles/index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <img src="./assets/icons/logo.svg" alt="Quicklist logo">
+      <p>quicklist</p>
+    </header>
+
     <main>
       <div class="container">
-        <a class="link" href="#">← Voltar</a>
+        <a class="link" href="#"><- Voltar</a>
         <h1>Compras da semana</h1>
         <form>
           <fieldset class="add-items">
-            <input
-              type="text"
-              placeholder="Adicione um novo item"
-              id="new-item"
-            />
+              <input
+                type="text"
+                placeholder="Adicione um novo item"
+                id="new-item"
+              />
             <button type="submit" id="add">Adicionar item</button>
           </fieldset>
 

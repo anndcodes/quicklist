@@ -55,3 +55,43 @@ button {
 a {
   text-decoration: none;
 }
+
+.item-wrapper {
+  position: relative;
+}
+
+.item-wrapper input {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-primary);
+  border-radius: .6rem;
+  opacity: 0;
+}
+
+.item-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.item-wrapper label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-radius: .6rem;
+  border: 1px solid var(--border-primary);
+}
+
+.item-wrapper input:checked + label::before {
+  background: var(--color-brand);
+  border: none;
+  background-image: url("/assets/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-wrapper input:hover + label::before {
+  border-color: var(--border-hover);
+}
