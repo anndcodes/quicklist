@@ -87,7 +87,7 @@ a {
 .item-wrapper input:checked + label::before {
   background: var(--color-brand);
   border: none;
-  background-image: url("/assets/icons/check.svg");
+  background-image: url("../assets/icons/check.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
